@@ -3947,31 +3947,26 @@ footer form button {
 }
 
 
-.courses-content header {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 20px;
-  animation: fade-in 1s ease-in-out;
-}
+
 .courses-content {
   max-width: 1200px;
-  margin: auto;
+  margin: 40px auto;
   padding: 20px;
 }
 .courses-content .row {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .courses-content .column{
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .courses-content .column, .admission-column {
   flex: 1;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -4009,7 +4004,8 @@ footer form button {
   text-align: center;
 }
 .courses-content table {
-  width: 100%;
+  width: 90%;
+  margin: 20px auto;
   border-collapse: collapse;
   margin-top: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -4076,13 +4072,13 @@ footer form button {
   display: inline-block;
   font-size: 18px;
   color:  #06038D;
-  background: linear-gradient(to right, #ff9933, #ffffff, #138808);
+  background: linear-gradient(to right, #FF671F, #ffffff, #046A38);
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bolder;
   transition: transform 0.3s ease-in-out;
-  animation: bounce 1s infinite alternate;
+  animation: bounce 1s infinite alternate, text-wave 2s infinite ease-in-out;
 }
 
 .courses-content .syllabus-content {
@@ -4100,6 +4096,7 @@ footer form button {
 .courses-content .download-link:hover {
   transform: scale(1.1);
 }
+
 
 .courses-content .arrow {
   font-size: 18px;
@@ -4145,9 +4142,11 @@ footer form button {
   0% { transform: translateY(0); }
   100% { transform: translateY(-5px); }
 }
-@keyframes bounce {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-5px); }
+
+@keyframes move-text {
+  0% { left: -100%; }
+  50% { left: 0%; }
+  100% { left: 100%; }
 }
 
 @keyframes slide-in {
@@ -4158,5 +4157,120 @@ footer form button {
   to {
       opacity: 1;
       transform: translateX(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .courses-content {
+    padding: 15px;
+    margin: 30px auto;
+  }
+
+  .courses-content .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .courses-content .column {
+    width: 90%;
+  }
+
+  .courses-content h2 {
+    font-size: 20px;
+  }
+
+  .courses-content .download-section {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .courses-content table {
+    font-size: 16px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-content {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .courses-content .row {
+    flex-direction: column;
+  }
+
+  .courses-content .column {
+    width: 95% ;
+  }
+
+  .courses-content h2 {
+    font-size: 18px;
+  }
+
+  .courses-content table {
+    font-size: 14px;
+  }
+
+  .courses-content .download-section {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-content {
+    margin: 20px auto;
+    padding: 5px;
+  }
+
+  .courses-content h3 {
+    font-size: 14px;
+  }
+
+  .courses-content .download-section p{
+    font-size: 14px;
+  }
+
+  .courses-content .course-section{
+    width: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .courses-content th {
+    font-size: 14px;
+  }
+
+  .courses-content .download-link{
+    width: 70%;
+  }
+
+  .courses-content h2 {
+    font-size: 18px;
+  }
+
+  .courses-content .row {
+    flex-direction: column;
+  }
+
+  .courses-content .column {
+    width: 90%;
+    padding: 15px;
+    margin: auto;
+  }
+
+  .courses-content .admission-column {
+    width: 90%;
+    padding: 15px;
+  }
+
+
+  .courses-content .download-section {
+    padding: 10px;
+  }
+
+  .courses-content table {
+    font-size: 12px;
   }
 }
