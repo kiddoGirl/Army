@@ -4137,6 +4137,10 @@ footer form button {
   font-size: 1.2em;
 }
 
+.hidden-content p{
+  margin-bottom: 10px;
+}
+
 @keyframes bounce {
   0% { transform: translateY(0); }
   100% { transform: translateY(-5px); }
