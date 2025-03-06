@@ -4040,7 +4040,7 @@ footer form button {
 }
 .courses-content .selection-list i, .education-icon i {
   margin-right: 18px;
-  color: #FF671F;
+  color:  #046A38;
   font-size: 18px;
 }
 
@@ -4051,7 +4051,7 @@ footer form button {
 
 .courses-content .admission-column i {
   margin-right: 10px;
-  color: #FF671F;
+  color:  #046A38;
   font-size: 18px;
 }
 
@@ -4076,7 +4076,7 @@ footer form button {
   display: inline-block;
   font-size: 18px;
   color:  #06038D;
-  background: linear-gradient(to right, #FF671F, #ffffff, #046A38);
+  background: linear-gradient(to right, #FF671F, #ffffff,  #046A38);
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
