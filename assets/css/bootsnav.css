@@ -1070,7 +1070,9 @@ nav.navbar.bootsnav {
 
   nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li a:hover, 
   nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li a:hover {
-    background-color: transparent;
+    background-color: #FF671F;
+    color: #ffffff !important;
+    font-weight: bolder;
   }
 
   nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a {
@@ -1863,6 +1865,8 @@ nav.navbar.bootsnav {
   nav.navbar.bootsnav .navbar-nav > li:first-child > a {
     border-top: none;
   }
+
+
 
   nav.navbar.bootsnav ul.navbar-nav.navbar-left > li:last-child > ul.dropdown-menu {
     border-bottom: solid 1px #e0e0e0;
