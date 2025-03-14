@@ -4043,7 +4043,9 @@ footer form button {
 }
 
 .column:hover, .admission-column:hover {
-  transform: scale(1.05);
+  box-shadow: 0px 5px 15px #FF9933, /* Saffron */
+  0px 10px 20px #FFFFFF, /* White */
+  0px 15px 25px #138808; /* Green */
 }
 
 .courses-content .center-text {
@@ -4851,6 +4853,9 @@ footer form button {
 
 .mv-item:hover {
   transform: scale(1.05);
+  box-shadow: 0px 5px 15px #FF9933, /* Saffron */
+  0px 10px 20px #FFFFFF, /* White */
+  0px 15px 25px #138808; /* Green */
 }
 
 /* Icon Styling */
