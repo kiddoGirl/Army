@@ -1496,14 +1496,43 @@ body,
 .about-area .thumb-img {
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: center; /* Center alignment */
+  align-items: center;
 }
 
 .about-area .thumb-img img {
+  width: 400px; /* Increased width */
+  height: 400px; /* Increased height */
   border-radius: 50%;
   padding: 5px;
   border: 5px solid #ffffff;
   box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+  object-fit: cover; /* Ensures image fills the space */
 }
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .about-area .thumb-img img {
+    width: 350px; /* Adjust size for tablets */
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-area .thumb-img img {
+    width: 300px; /* Adjust size for mobile screens */
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-area .thumb-img img {
+    width: 250px; /* Adjust size for very small screens */
+    height: 250px;
+  }
+}
+
 
 .about-area .thumb-img .video a {
   position: absolute;
@@ -2137,13 +2166,33 @@ body,
 /* Portfolio Effect */
 
 .portfolio-area .portfolio-items .pf-item .item-effect > img {
-  max-width: none;
-  width: -webkit-calc(100% + 60px);
-  width: calc(100% + 60px);
+  width: 100%; 
+  max-width: 300px; /* Limits size on larger screens */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Prevents distortion */
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(-50px,0,0);
   transform: translate3d(-50px,0,0);
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-area .portfolio-items {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items */
+    margin-left: 50px;
+  }
+
+  .portfolio-area .portfolio-items .pf-item {
+    width: 90%; /* Adjust width for smaller screens */
+    text-align: center; /* Ensures proper alignment */
+  }
+
+  .portfolio-area .portfolio-items .pf-item .item-effect > img {
+    max-width: 100%; /* Adjusts size for smaller screens */
+    height: auto; /* Keeps aspect ratio */
+  }
 }
 
 .portfolio-area .portfolio-items .pf-item:hover .item-effect > img {
@@ -2386,6 +2435,11 @@ width: 110%;
   color:  #06038D;
   margin-bottom: -20px;
   box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+}
+
+.team-members .thumb img{
+width: 100%;
+height: 300px;
 }
 
 .team-members .bottom {
@@ -3699,6 +3753,14 @@ footer .about ul li a {
   width: 35px;
   border-radius: 3px;
 }
+footer.bg-dark {
+  padding: 20px 0; /* Reduce the padding */
+}
+footer .f-item {
+  margin-bottom: 20px; /* Reduce space between sections */
+}
+
+
 
 footer.bg-dark .about ul li a {
   background: #046A38 none repeat scroll 0 0;
@@ -3924,6 +3986,8 @@ footer form button {
 .footer-bottom .copyright p {
   line-height: 45px;
 }
+
+
 
 
 /* ============================================================== 
@@ -4373,6 +4437,7 @@ footer form button {
 
 .student-card img {
   width: 100%;
+  height: 300px;
   border-radius: 10px;
   margin-bottom: 15px;
 }
@@ -4814,4 +4879,50 @@ footer form button {
   .mv-grid {
       grid-template-columns: 1fr;
   }
+}
+
+.infrastructure-section {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+.infrastructure-section .facility-box {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  height: 200px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.infrastructure-section .facility-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px #FF9933, /* Saffron */
+  0px 10px 20px #FFFFFF, /* White */
+  0px 15px 25px #138808; /* Green */
+}
+
+.infrastructure-section .facility-box i {
+  font-size: 40px;
+  color: #ff5722;
+  transition: color 0.3s ease-in-out;
+}
+
+.infrastructure-section .facility-box h5 {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff5722;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.infrastructure-section .facility-box p {
+  font-size: 14px;
+  color: #666;
 }
