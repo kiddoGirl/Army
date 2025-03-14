@@ -87,7 +87,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo-light.png" class="logo logo-display" alt="Logo">
+                        <img src="assets/img/A_LOGO_ALAGU-removebg-preview.png" class="logo logo-display" alt="Logo">
                         <img src="assets/img/logo.png" class="logo logo-scrolled" alt="Logo">
                     </a>
                 </div>
@@ -249,7 +249,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner text-light text-center carousel-zoom">
                 <div class="item active">
-                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/military-training.jpg);"></div>
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/home1.jpeg);"></div>
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
@@ -270,7 +270,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/army-training.jpg);"></div>
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/home2.jpeg);"></div>
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
@@ -290,7 +290,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/navy-airforce.jpg);"></div>
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/home3.jpeg);"></div>
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
@@ -1011,7 +1011,7 @@
                         <p>
                             Ready to transform your fitness journey? Fill out the form below and let’s get started!
                         </p>
-                        <form action="assets/mail/contact.php" method="POST" class="contact-form">
+                        <form class="contact-form">
                             <div class="form-group">
                                 <input class="form-control" id="name" name="name" placeholder="Full Name" type="text">
                             </div>
@@ -1294,6 +1294,42 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        (function() {
+            emailjs.init("j-s5yzW7yuFdGV97D"); // Replace with your Public Key
+        })();
+
+        document.querySelector(".contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from reloading the page
+
+            // Collect form data
+            let formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                comments: document.getElementById("comments").value
+            };
+
+            // Send email via EmailJS
+            emailjs.send("service_j7sgrr3", "template_eau8tzd", formData)
+            .then(response => {
+                console.log("Email sent successfully!", response.status, response.text);
+                document.getElementById("message").innerHTML = 
+                    '<div class="alert alert-success">Message sent successfully!</div>';
+            }, error => {
+                console.error("Email failed to send!", error);
+                document.getElementById("message").innerHTML = 
+                    '<div class="alert alert-danger">Failed to send message. Try again later.</div>';
+            });
+
+            // Reset form fields
+            document.querySelector(".contact-form").reset();
+        });
+    </script>
+
     
     <!-- End Footer-->
 

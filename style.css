@@ -787,6 +787,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
   font-size: 40px;
   margin-top: -10px;
   margin-bottom: 0;
+  color: #FF9933;
 }
 
 .breadcrumb > li + li::before {
