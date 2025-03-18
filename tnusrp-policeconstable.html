@@ -651,6 +651,14 @@
         }
     </script>
 
+<script>
+    window.addEventListener("load", function () {
+        setTimeout(() => {
+            document.querySelector(".preloader").style.display = "none";
+        }, 200); // Hides the preloader quickly after page load
+    });
+</script>
+
     <!-- jQuery Frameworks
     ============================================= -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
