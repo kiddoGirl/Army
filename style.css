@@ -628,6 +628,23 @@ nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   padding: 35px 0;
 }
 
+@media (max-width: 768px) { 
+  .navbar-brand .logo {
+      height: 60px !important; /* Increase height */
+      width: auto;  /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 768px) { 
+  .f-item  .logo {
+      width: 200px; /* Reduce size on mobile */
+      height: auto;  /* Maintain aspect ratio */
+      display: block;
+    margin: 0 auto; /* Center align */
+  }
+}
+
+
 .attr-nav.social li {
   display: inline-block;
   padding: 25px 0 !important;
