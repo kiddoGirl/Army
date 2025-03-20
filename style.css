@@ -953,6 +953,19 @@ i.fas.fa-envelope {
   width: 100%;
   height: auto;
 }
+@media (max-width: 767px) {
+  .breadcrumb-area {
+      height: 500px; /* Increase height for mobile view */
+      display: flex;
+      align-items: center; /* Center content vertically */
+      justify-content: center; /* Center content horizontally */
+  }
+
+  .breadcrumb-area h1 {
+      font-size: 24px; /* Adjust font size for better visibility */
+      text-align: center;
+  }
+}
 
 /* ============================================================== 
      # Banner 
@@ -1960,14 +1973,25 @@ body,
     # Services
 ====================================== */
 
+.services-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .services-area.bottom-less .services-items .equal-height {
   margin-bottom: 30px;
 }
 
 .services-area .services-items .item {
-  padding: 67px 40px;
+  flex: 1 1 300px; /* Allows items to grow/shrink */
+  max-width: 350px;
+  margin: 15px;
+  padding: 50px 30px;
+  text-align: center;
   background: #ffffff;
   box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease-in-out;
 }
 
 .services-items .item .icon {
@@ -1979,6 +2003,7 @@ body,
   width: 80px;
   line-height: 80px;
   text-align: center;
+  margin: 0 auto 20px;
 }
 
 .services-items .item .icon:after {
@@ -2064,6 +2089,42 @@ body,
 
 .services-area .services-items .item:hover > a::after {
   width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .services-items .item {
+    flex: 1 1 45%; /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .services-items .item {
+    width: 90%; /* Full width on smaller screens */
+  }
+
+  .services-area {
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-items .item {
+    padding: 40px 20px;
+  }
+  
+  .services-area h2 {
+    font-size: 24px;
+  }
+
+  .services-items .item p {
+    font-size: 14px;
+  }
 }
 
 /* ===================================
@@ -2409,6 +2470,11 @@ body,
 
 .team-members{
 width: 110%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center; /* Centers items */
+align-items: center;
+text-align: center; /* Ensures text inside items is centered */
 }
 
 
@@ -2506,6 +2572,98 @@ height: 300px;
   left: auto;
   right: -50px;
 }
+
+/* For Large Tablets & Small Laptops (Nest Hub, iPad Pro, etc.) */
+@media (max-width: 1024px) {
+  .team-members .single-item {
+    width: 40%; /* Two items per row */
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center item content */
+  }
+
+  .team-members .thumb img {
+    height: 250px; /* Reduce image height */
+  }
+
+  .team-members .item .info {
+    padding: 25px; /* Adjust padding */
+  }
+
+  .team-members .bottom h4 {
+    font-size: 18px;
+  }
+
+  .team-members .bottom span {
+    font-size: 16px;
+  }
+}
+
+/* For Tablets (iPad, Nest Hub, 768px and below) */
+@media (max-width: 768px) {
+  .team-members {
+    width: 100%; /* Ensures content fits within screen */
+  }
+
+  .team-members .single-item {
+    width: 100%; /* Single column */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-members .thumb img {
+    height: 300px; /* Adjust image size */
+    width: 300px;
+  }
+
+  .team-members .item .info {
+    padding: 20px;
+  }
+
+  .team-members .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .team-members .bottom h4 {
+    font-size: 16px;
+  }
+
+  .team-members .bottom span {
+    font-size: 14px;
+  }
+}
+
+/* For Mobile Devices (Phones 480px and below) */
+@media (max-width: 480px) {
+  .team-members .single-item {
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-members .thumb img {
+    height: 180px; /* Reduce image size for small screens */
+  }
+
+  .team-members .item .info {
+    padding: 15px;
+  }
+
+  .team-members .bottom h4 {
+    font-size: 14px;
+  }
+
+  .team-members .bottom span {
+    font-size: 12px;
+  }
+}
+
+
 
 /* ===================================
     # Pricing Table
